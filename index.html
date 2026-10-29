@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Teaching Hub - Astrophysics, Waves & Orbital Mechanics</title>
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        /* Navigation Tabs */
+        .nav-tabs {
+            max-width: 1100px;
+            margin: -25px auto 30px auto;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+        .tab-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .formula-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            border-top: 1px solid var(--border);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fa-solid fa-graduation-cap"></i> Physics Teaching Hub</h1>
+    <p>Astrophysics, Stellar Evolution, Wave Basics & Orbital Speed Calculations</p>
+</header>
+
+<!-- Navigation Tabs -->
+<div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('astro')"><i class="fa-solid fa-earth-americas"></i> Astrophysics & Stars</button>
+    <button class="tab-btn" onclick="switchTab('gravity')"><i class="fa-solid fa-moon"></i> Gravity & Orbits</button>
+    <button class="tab-btn" onclick="switchTab('waves')"><i class="fa-solid fa-water"></i> Wave Basics</button>
+    <button class="tab-btn" onclick="switchTab('math')"><i class="fa-solid fa-calculator"></i> Calculations & Formulas</button>
+</div>
+
+<div class="container">
+
+    <!-- TAB 1: ASTROPHYSICS & STARS -->
+    <div id="astro" class="tab-content active">
+        <div class="card">
+            <h2><i class="fa-solid fa-star"></i> Astrophysics Core Concepts</h2>
+            <ul>
+                <li><strong>Solar System Location:</strong> Located in the <strong>Milky Way</strong> galaxy[cite: 3, 9].</li>
+                <li><strong>Planetary Orbit Force:</strong> Kept in orbit around the Sun by <strong>gravity</strong> (gravitational attraction)[cite: 3, 9].</li>
+                <li><strong>Galaxies:</strong> A large collection of stars is called a <strong>galaxy</strong>[cite: 3, 9].</li>
+                <li><strong>Stellar Color & Temperature:</strong> The color of a star depends on its <strong>surface temperature</strong> (Blue stars are hottest; Red stars are cooler)[cite: 3, 7].</li>
+                <li><strong>Red-Shift:</strong> The apparent change in wavelength of light from distant galaxies moving away from us is called <strong>red-shift</strong>[cite: 3, 9].</li>
+                <li><strong>Big Bang Theory:</strong> The <strong>Cosmic Microwave Background (CMB) radiation</strong> detected from all directions is evidence supporting the Big Bang theory[cite: 3, 9].</li>
+                <li><strong>Orbital Mechanics:</strong> For an object in stable orbit, if its speed increases, the <strong>radius</strong> of its orbit must decrease[cite: 3]. Comets have highly elliptical orbits[cite: 3, 9].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-circle-nodes"></i> Stellar Evolution & Life Cycles</h2>
+            <h3>1. Small-to-Medium Star (Like our Sun)</h3>
+            <p>Nebula $\rightarrow$ Protostar $\rightarrow$ Main Sequence Star $\rightarrow$ <strong>Red Giant</strong> $\rightarrow$ <strong>White Dwarf</strong>[cite: 3, 6, 9]</p>
+            
+            <h3>2. Massive Star (Like Betelgeuse)</h3>
+            <p>Nebula $\rightarrow$ Protostar $\rightarrow$ Main Sequence Star $\rightarrow$ Red Supergiant $\rightarrow$ Supernova explosion $\rightarrow$ 
+               <strong>Neutron Star</strong> (if extremely dense) OR <strong>Black Hole</strong> (if mass is extremely high)[cite: 3, 6, 9].</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-chart-line"></i> Hertzsprung-Russell (H-R) Diagram & Classifications</h2>
+            <p><strong>Axes:</strong> Vertical axis represents <strong>Absolute Magnitude / Luminosity</strong>; Horizontal axis represents <strong>Decreasing Temperature</strong>[cite: 6, 7].</p>
+            <table>
+                <tr>
+                    <th>Class</th>
+                    <th>Surface Temperature (K)</th>
+                    <th>Colour</th>
+                </tr>
+                <tr><td>O</td><td>More than 33000</td><td>Blue[cite: 7]</td></tr>
+                <tr><td>B</td><td>10000 - 33000</td><td>Blue-White[cite: 7]</td></tr>
+                <tr><td>A</td><td>7500 - 10000</td><td>White[cite: 7]</td></tr>
+                <tr><td>F</td><td>6000 - 7500</td><td>Yellow-White[cite: 7]</td></tr>
+                <tr><td>G</td><td>5200 - 6000</td><td>Yellow[cite: 7]</td></tr>
+                <tr><td>K</td><td>3700 - 5200</td><td>Orange[cite: 7]</td></tr>
+                <tr><td>M</td><td>3700 - 2000</td><td>Red[cite: 7]</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 2: GRAVITY & ORBITS -->
+    <div id="gravity" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-globe"></i> Gravity and Orbits</h2>
+            <ul>
+                <li><strong>Planets Order:</strong> Mercury, Venus, Earth, Mars (from the Sun outwards)[cite: 9].</li>
+                <li><strong>Comets:</strong> Made of ice and dust, orbit the Sun in a <strong>highly elliptical orbit</strong>, and travel faster when nearer the Sun[cite: 3, 9].</li>
+                <li><strong>Centripetal Force:</strong> When an object moves in a circle, the force acting towards the center is called the <strong>centripetal force</strong> (provided by gravity for planetary orbits)[cite: 3, 9].</li>
+                <li><strong>Gravitational Field Strength:</strong> Determined by <strong>both the mass of the body and the distance from it</strong>[cite: 3].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TAB 3: WAVE BASICS -->
+    <div id="waves" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-water"></i> Wave Basics & Properties</h2>
+            <ul>
+                <li><strong>Transverse Waves:</strong> Particles vibrate <em>perpendicular</em> to the wave direction (e.g., light waves).</li>
+                <li><strong>Longitudinal Waves:</strong> Particles vibrate <em>parallel</em> to the wave direction featuring compressions and rarefactions (e.g., sound waves)[cite: 4].</li>
+                <li><strong>Amplitude:</strong> The maximum displacement of a wave particle from its equilibrium/rest position[cite: 4].</li>
+                <li><strong>Wavelength ($\lambda$):</strong> Distance between identical points on adjacent waves (measured in meters or cm)[cite: 4].</li>
+                <li><strong>Frequency ($f$):</strong> Number of oscillations per second, measured in Hertz (Hz)[cite: 4, 8].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TAB 4: CALCULATIONS & FORMULAS -->
+    <div id="math" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-calculator"></i> Key Physics Formulas & Math Skills</h2>
+            
+            <h3>1. Wave Speed Equation</h3>
+            <div class="formula-box">
+                v = f × &lambda; <br>
+                (Wave Speed = Frequency × Wavelength)[cite: 4, 8]
+            </div>
+
+            <h3>2. Frequency Equation</h3>
+            <div class="formula-box">
+                f = number of oscillations / time[cite: 10] <br>
+                Time Period (T) = 1 / f[cite: 4, 8]
+            </div>
+
+            <h3>3. Orbital Speed Equation</h3>
+            <div class="formula-box">
+                v = 2 &pi; r / T <br>
+                (Orbital Speed = 2 × &pi; × Orbital Radius / Time Period)[cite: 5]
+            </div>
+            <p><em>Note on Scientific Notations:</em> Use standard scientific notations (e.g., $7.2 \times 10^5$) for handling very large astronomical distances and speeds in calculations[cite: 5].</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Physics Teaching Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
